@@ -4,10 +4,24 @@ import './App.css';
 import Chat from './component/Chat';
 import Sidebar from './component/Sidebar';
 import axios from './Axios'
+import Login from './component/Login';
+import { useStateValue } from './StateProvider';
+import { actionType } from './reducer';
 
 function App() {
+
 const [messages, setMessages]=useState([])
-  useEffect(
+const [{user},dispatch] = useStateValue()
+
+useEffect(()=>{
+if(user===null){
+  dispatch({
+    type: actionType.SET_USER,
+    user:JSON.parse(localStorage.getItem('user'))
+})
+}
+},[])
+useEffect(
     ()=>{
       axios.get('/messages/sync').then(response=>{
         setMessages(response.data)
@@ -32,15 +46,15 @@ useEffect(
         }
   },[messages]
 )
-
-console.log(messages)
-
   return (
     <div className="app">
+       {!user ? <Login/> : (
       <div className="app__body">
-      <Sidebar />
+        
+      <Sidebar messages={messages}/>
       <Chat messages={messages}/>
       </div>
+    )}
     </div>
   );
 }

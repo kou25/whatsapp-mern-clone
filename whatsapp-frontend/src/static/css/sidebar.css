@@ -49,3 +49,6 @@
     background-color: white;
     overflow: scroll;
 }
+.sidebarChat:hover{
+    background-color: #ebebeb;
+}
