@@ -33,7 +33,7 @@
     border-radius: 20px;
 }
 
-.sidebar__searchContainer > .MuiSvgIcon-root{
+.sidebar__searchContainer > .anticon{
     color: grey;
     padding: 10px;
 }
@@ -52,3 +52,16 @@
 .sidebarChat:hover{
     background-color: #ebebeb;
 }
+.sidebar__drawer{
+    width: 250px
+}
+.sidebar__popover>p:hover{
+    color: grey;
+}
+
+
+@media (max-width: 991px) {
+    .sidebar__header{
+        padding: 12px;
+    }
+  }

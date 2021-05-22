@@ -8,6 +8,7 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.0",
+    "antd": "^4.15.6",
     "axios": "^0.21.1",
     "firebase": "^8.6.1",
     "moment": "^2.29.1",

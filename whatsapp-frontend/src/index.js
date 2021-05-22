@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reducer,{initialState} from './reducer'
 import {StateProvider} from './StateProvider'
-
+import 'antd/dist/antd.css';
 ReactDOM.render(
   <React.StrictMode>
     <StateProvider initialState={initialState} reducer={reducer}>

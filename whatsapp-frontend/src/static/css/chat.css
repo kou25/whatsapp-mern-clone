@@ -72,6 +72,7 @@
     border-top: 1px solid lightgray;
 }
 
+
 .chat__footer>form{
     flex: 1;
     display: flex;
@@ -90,6 +91,41 @@
 }
 
 .chat__footer > .MuiSvgIcon-root{
-    padding: 10px;
+    padding: 1px;
     color: grey;
 }
+
+
+
+
+
+
+.home__container{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.home__text > p{
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+
+.home__image>img{
+    margin: 0 auto;
+    max-width: 250px;
+    border-radius: 50%;
+    transform-origin: center;
+}
+
+@media (max-width: 991px) {
+    .chat{
+        overflow-y: auto;
+    }
+    .chat__header,.chat__body,.chat__footer{
+        width: 400px;
+    }
+  }
